@@ -13,7 +13,4 @@ The company handles their Sales payroll in the following way:
 
 # format of the application
 The output of the utility should be a CSV file, containing the payment dates for the next twelve months.
-The CSV file should contain a column for the month name, a column that contains the salary payment date
-
-for that month, and a column that contains the bonus payment date. The file name should be provided as an
-argument to the cli command.
+The CSV file should contain a column for the month name, a column that contains the salary payment date for that month, and a column that contains the bonus payment date. The file name should be provided as an argument to the cli command.
