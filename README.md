@@ -19,6 +19,10 @@ The CSV file should contain a column for the month name, a column that contains 
 
 ## Manual
 
+### Installation
+
+Run composer update if you're not going to use the docker version
+
 ### Testing
 
 Execute ""./test.sh"
