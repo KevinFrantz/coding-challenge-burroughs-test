@@ -14,6 +14,15 @@ class BonusPayment extends Payment implements BonusPaymentInterface
     protected $date;
     
     /**
+     * @param int $amount
+     * @param \DateTime $date
+     */
+    public function __construct(?int $amount = null, ?\DateTime $date =null){
+        parent::__construct($amount);
+        $this->date = $date;
+    }
+    
+    /**
      * {@inheritDoc}
      * @see \model\payment\BonusPaymentInterface::setDate()
      */

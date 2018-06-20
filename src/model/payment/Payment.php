@@ -9,6 +9,10 @@ namespace model\payment;
 class Payment implements PaymentInterface
 {
     
+    public function __construct(?int $amount = null){
+        $this->amount = $amount;
+    }
+    
    /**
     * @var int
     */

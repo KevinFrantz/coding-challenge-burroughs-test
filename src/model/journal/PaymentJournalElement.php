@@ -29,6 +29,17 @@ class PaymentJournalElement implements PaymentJournalElementInterface
     protected $payment;
 
     /**
+     * @param PersonInterface $person
+     * @param PaymentInterface $payment
+     * @param \DateTime $date
+     */
+    public function __construct(?PersonInterface $person=null, ?PaymentInterface $payment=null, \DateTime $date=null){
+        $this->person = $person;
+        $this->realDateTime = $date;
+        $this->payment = $payment;
+    }
+    
+    /**
      * 
      * {@inheritDoc}
      * @see \model\journal\PaymentJournalElementInterface::getPerson()
