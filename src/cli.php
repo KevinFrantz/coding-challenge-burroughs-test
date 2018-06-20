@@ -10,7 +10,8 @@ echo "\n\nPAYMENT CALCULATOR\n\n";
 if(count($argv)<=1){
     /**
      * Expanded Version:
-     * This will print a function with all planed transactions
+     * This will print a csv with all planed transactions for the next year
+     * The testdata therefore you will find under testdata
      * It's just there to show OOP, Clean Code and Testing Skills 
      */
     print("This script needs arguments.\n\n");
@@ -25,7 +26,7 @@ if(count($argv)<=1){
     echo $generator->getJournalCsv();
 }else{
     /**
-     * Here is the solution to the tasks.  
+     * Here is the solution to the original tasks.  
      */
     include "quick_solution.php"; 
 }
