@@ -2,10 +2,10 @@
 namespace model\person;
 
 use model\payment\BonusPayment;
-use Doctrine\Common\Collections\ArrayCollection;
 use model\payment\BonusPaymentInterface;
 use model\payment\PaymentInterface;
 use PHPUnit\Framework\TestCase;
+use model\payment\BonusPaymentCollection;
 
 /**
  *
@@ -42,7 +42,7 @@ class SalesPersonTest extends TestCase
         $this->bonus = new BonusPayment();
         $this->salary = new BonusPayment();
         $this->person = new SalesPerson();
-        $this->person->setBonuses(new ArrayCollection([$this->bonus]));
+        $this->person->setBonuses(new BonusPaymentCollection([$this->bonus]));
         $this->person->setFirstName(self::FIRST_NAME);
         $this->person->setLastName(self::LAST_NAME);
         $this->person->setId(self::ID);

@@ -9,6 +9,8 @@ use model\person\SalesPersonInterface;
 use model\person\Person;
 use model\payment\Payment;
 use model\payment\BonusPayment;
+use model\payment\BonusPaymentCollection;
+use model\payment\BonusPaymentCollectionInterface;
 
 /**
  *
@@ -65,8 +67,8 @@ final class SalesRepository implements SalesRepositoryInterface
      * @param int $personId
      * @return ArrayCollection
      */
-    private function getBonusesFor(int $personId):ArrayCollection{
-       $bonuses = new ArrayCollection();
+    private function getBonusesFor(int $personId):BonusPaymentCollectionInterface{
+       $bonuses = new BonusPaymentCollection();
        foreach ($this->bonus->getRecords() as $bonus){
            if((int)$bonus['employee_id'] === $personId){
                $bonusObject = new BonusPayment();
