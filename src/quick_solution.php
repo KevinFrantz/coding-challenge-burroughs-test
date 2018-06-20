@@ -1,6 +1,8 @@
 <?php
 use controller\PaymentController;
 
+error_reporting (0);
+
 /**
  * Here is a fast quick solution for task  
  */
@@ -28,5 +30,11 @@ $lines = "month_name,bonus_payment_date,salary_payment_date\n";
 for ($i=0;  $i<12; $i++){
     $lines .= $month_array[$i]['name'].','.$month_array[$i]['bonus'].','.$month_array[$i]['fixed']."\n";
 }
-file_put_contents($argv[0],$lines);
+echo "File will be created under \"".$argv[1]."\"...\n";
+try{
+    file_put_contents($argv[1],$lines);
+    print("File successfull created!\n");
+}catch(\Exception $exception){
+    print("An Error occured!\n");
+}
 ?>

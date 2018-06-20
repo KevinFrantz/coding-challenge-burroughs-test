@@ -1,5 +1,4 @@
 <?php
-
 use repository\SalesRepository;
 use controller\PaymentController;
 use generator\CsvGenerator;
@@ -11,7 +10,8 @@ echo "\n\nPAYMENT CALCULATOR\n\n";
 if(count($argv)<=1){
     /**
      * Expanded Version:
-     * This will print a function with all planed transactions 
+     * This will print a function with all planed transactions
+     * It's just there to show OOP, Clean Code and Testing Skills 
      */
     print("This script needs arguments.\n\n");
     echo "The first argument must contain the output file path. To let the standart programm run. \n\n";
