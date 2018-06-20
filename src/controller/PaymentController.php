@@ -100,10 +100,11 @@ class PaymentController implements PaymentControllerInterface
     }
     
     /**
+     * Declared this function as static to solve the original purpose.
      * This function has to be public for testing reasons. 
      * @param \DateTime $datetime
      */
-    public function dayRoutine(\DateTime $datetime):?int{
+    static public function dayRoutine(\DateTime $datetime):?int{
         if((int)$datetime->format('d')===15){
             return self::MIDTERM_ROUTINE;
         }
@@ -125,7 +126,7 @@ class PaymentController implements PaymentControllerInterface
      * This function is public for testing reasons
      * @return \DateTime
      */
-    public function getDatetimeForLastDate(\DateTime $datetime):\DateTime{
+    static public function getDatetimeForLastDate(\DateTime $datetime):\DateTime{
         $tmpDatetime = clone $datetime;
         if($datetime->format('l')==='Sunday'){
             $tmpDatetime->modify('- 2 day');
@@ -161,7 +162,7 @@ class PaymentController implements PaymentControllerInterface
      * @param \DateTime $datetime
      * @return \DateTime
      */
-    public function getMidtermDateTime(\DateTime $datetime):\DateTime{
+    static public function getMidtermDateTime(\DateTime $datetime):\DateTime{
         $tmpDatetime = clone $datetime;
         if($datetime->format('l')==='Sunday'){
             $tmpDatetime->modify('+ 3 day');

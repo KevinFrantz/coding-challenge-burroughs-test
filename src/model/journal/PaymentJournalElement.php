@@ -97,7 +97,5 @@ class PaymentJournalElement implements PaymentJournalElementInterface
     {
         $this->realDateTime = $realDate;
     }
-
-
 }
 
