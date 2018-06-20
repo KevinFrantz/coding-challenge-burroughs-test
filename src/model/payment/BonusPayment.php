@@ -8,6 +8,8 @@ namespace model\payment;
  */
 class BonusPayment extends Payment implements BonusPaymentInterface
 {
+    const CATEGORY_BONUS = 'bonus';
+    
     /**
      * @var \DateTime
      */
@@ -20,6 +22,7 @@ class BonusPayment extends Payment implements BonusPaymentInterface
     public function __construct(?int $amount = null, ?\DateTime $date =null){
         parent::__construct($amount);
         $this->date = $date;
+        $this->categorie = self::CATEGORY_BONUS;
     }
     
     /**

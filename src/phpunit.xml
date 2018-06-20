@@ -8,5 +8,9 @@
       <directory>./model/</directory>
       <file>*Test.php</file>
     </testsuite>
+    <testsuite name="Controller">
+      <directory>./controller/</directory>
+      <file>*Test.php</file>
+    </testsuite>
   </testsuites>
 </phpunit>

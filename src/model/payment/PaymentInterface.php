@@ -19,5 +19,17 @@ interface PaymentInterface
      * @param int $amount
      */
     public function setAmount(int $amount):void;
+    
+    /**
+     * Sets the categorie of the payment.
+     * @return string
+     */
+    public function getCategorie():string;
+    
+    /**
+     * Returns the categorie of the payment
+     * @param string $categorie
+     */
+    public function setCatergorie(string $categorie):void;
 }
 
