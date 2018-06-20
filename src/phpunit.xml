@@ -5,7 +5,7 @@
       <file>*Test.php</file>
     </testsuite>
     <testsuite name="Datastructure">
-      <directory>./model/data/</directory>
+      <directory>./model/</directory>
       <file>*Test.php</file>
     </testsuite>
   </testsuites>
